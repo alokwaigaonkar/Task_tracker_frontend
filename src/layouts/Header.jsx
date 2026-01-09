@@ -12,7 +12,15 @@ function Header({ viewMode, selectedDate, onToggleView }) {
     <header className="header">
       <div className="header__left">
         <div className="header__date">
-          {formattedDate}
+        {viewMode === "day" && selectedDate && (
+  <h2 className="header-date">
+    {new Date(selectedDate).toLocaleDateString("en-IN", {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    })}
+  </h2>
+)}
         </div>
       </div>
 

@@ -4,13 +4,17 @@ import Dashboard from "./pages/Dashboard";
 import MonthView from "./pages/MonthView";
 
 function App() {
-  const today = new Date().toISOString().split("T")[0];
+  const [selectedDate, setSelectedDate] = useState(null);
+const [viewMode, setViewMode] = useState("month");
 
-  const [selectedDate, setSelectedDate] = useState(today);
-  const [viewMode, setViewMode] = useState("day");
+const today = new Date();
+const selectedYear = selectedDate
+  ? Number(selectedDate.split("-")[0])
+  : today.getFullYear();
 
-  const selectedYear = Number(selectedDate.split("-")[0]);
-  const selectedMonth = Number(selectedDate.split("-")[1]);
+const selectedMonth = selectedDate
+  ? Number(selectedDate.split("-")[1])
+  : today.getMonth() + 1;
 
   /* ===============================
      Navigation handlers
