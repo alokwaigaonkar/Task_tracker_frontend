@@ -1,0 +1,146 @@
+
+
+   *,
+   *::before,
+   *::after {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+   }
+
+   
+   :root {
+     --bg-main: #f7f8fa;
+     --bg-sidebar: #ffffff;
+     --bg-card: #ffffff;
+   
+     --color-primary: #2563eb;
+     --color-success: #22c55e;
+     --color-danger: #ef4444;
+   
+     --text-dark: #111827;
+     --text-muted: #6b7280;
+   
+     --border-color: #e5e7eb;
+   
+     --radius-sm: 6px;
+     --radius-md: 10px;
+   
+     --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+   }
+   
+   html,
+   body,
+   #root {
+     height: 100%;
+   }
+   
+   body {
+     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+       Roboto, Helvetica, Arial, sans-serif;
+     background-color: var(--bg-main);
+     color: var(--text-dark);
+     line-height: 1.5;
+   }
+   
+   button {
+     font-family: inherit;
+     border: none;
+     cursor: pointer;
+     border-radius: var(--radius-sm);
+   }
+   
+   button:disabled {
+     opacity: 0.6;
+     cursor: not-allowed;
+   }
+   
+   input {
+     font-family: inherit;
+     border-radius: var(--radius-sm);
+     border: 1px solid var(--border-color);
+     padding: 8px 10px;
+   }
+   
+   input:focus {
+     outline: none;
+     border-color: var(--color-primary);
+   }
+   
+   .flex {
+     display: flex;
+   }
+   
+   .flex-between {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+   }
+   
+   .flex-center {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+   }
+   
+   .text-muted {
+     color: var(--text-muted);
+   }
+   
+   .text-success {
+     color: var(--color-success);
+   }
+   
+   .text-danger {
+     color: var(--color-danger);
+   }
+   
+   .card {
+     background-color: var(--bg-card);
+     border-radius: var(--radius-md);
+     box-shadow: var(--shadow-sm);
+     padding: 16px;
+   }
+   
+   ::-webkit-scrollbar {
+     width: 8px;
+   }
+   
+   ::-webkit-scrollbar-thumb {
+     background-color: var(--border-color);
+     border-radius: 4px;
+   }
+   h1, h2, h3 {
+    letter-spacing: -0.3px;
+  }
+  
+  h2 {
+    font-size: 22px;
+    font-weight: 800;
+  }
+  
+  h3 {
+    font-size: 16px;
+    font-weight: 700;
+  }
+  
+  small {
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+  button {
+    transition:
+      background-color 0.15s ease,
+      color 0.15s ease,
+      box-shadow 0.15s ease,
+      transform 0.1s ease;
+  }
+  
+  button:active {
+    transform: translateY(1px);
+  }
+  .soft-card {
+    background-color: var(--bg-card);
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+  }

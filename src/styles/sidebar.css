@@ -1,0 +1,62 @@
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    background: linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #f8fafc 100%
+    );
+    border-right: 1px solid var(--border-color);
+    padding: 22px 20px;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.03);
+  }
+  
+  .sidebar__title {
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color: var(--color-primary);
+    margin-bottom: 28px;
+  }
+  
+  .sidebar__section {
+    margin-bottom: 24px;
+  }
+  
+  .sidebar__year {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
+  
+  .sidebar__month {
+    position: relative;
+    padding: 8px 12px;
+    border-radius: var(--radius-md);
+    font-size: 14px;
+    cursor: pointer;
+    color: var(--text-dark);
+    transition: all 0.25s ease;
+  }
+  
+  .sidebar__month:hover {
+    background: linear-gradient(
+      90deg,
+      rgba(37, 99, 235, 0.08),
+      rgba(37, 99, 235, 0.03)
+    );
+    transform: translateX(4px);
+  }
+  
+  .sidebar__month.active {
+    background: linear-gradient(
+      90deg,
+      rgba(37, 99, 235, 0.18),
+      rgba(37, 99, 235, 0.06)
+    );
+    color: var(--color-primary);
+    font-weight: 700;
+    box-shadow: inset 3px 0 0 var(--color-primary);
+  }

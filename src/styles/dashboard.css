@@ -1,0 +1,174 @@
+.dashboard {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .dashboard__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+  
+  .dashboard__title {
+    font-size: 22px;
+    font-weight: 800;
+  }
+  
+
+.add-goal-btn {
+  background-color: #416ceb;
+  color: white;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 600;
+
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  transition: 
+    background-color 0.15s ease,
+    transform 0.1s ease,
+    box-shadow 0.15s ease;
+}
+
+
+.add-goal-btn:hover {
+  background-color: #1e4ed8;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+}
+
+
+.add-goal-btn:active {
+  transform: translateY(1px);
+}
+  
+  .goal-card {
+    background: linear-gradient(
+      180deg,
+      #ffffff,
+      #f9fafb
+    );
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  }
+  
+  .goal-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+  }
+  
+  .goal-card__header h3 {
+    font-size: 18px;
+    font-weight: 700;
+  }
+  
+  .goal-minutes {
+    font-size: 13px;
+    color: var(--text-muted);
+    font-weight: 600;
+  }
+
+  
+  .progress-bar {
+    height: 8px;
+    background-color: #e5e7eb;
+    border-radius: 999px;
+    overflow: hidden;
+    margin-bottom: 18px;
+  }
+  
+  .progress-bar__fill {
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      #2563eb,
+      #22c55e
+    );
+    border-radius: 999px;
+    transition: width 0.3s ease;
+  }
+ 
+  
+  .task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .task-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #f9fafb;
+    padding: 10px 12px;
+    border-radius: var(--radius-md);
+    transition: all 0.2s ease;
+  }
+  
+  .task-item:hover {
+    background-color: #f1f5f9;
+  }
+  
+  .task-item span {
+    flex: 1;
+    font-size: 14px;
+  }
+  
+  .task-item.completed span {
+    text-decoration: line-through;
+    color: var(--text-muted);
+  }
+  
+  .task-min {
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+
+  
+.add-task-btn {
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 500;
+
+  transition: 
+    border-color 0.15s ease,
+    color 0.15s ease,
+    background-color 0.15s ease;
+}
+
+.add-task-btn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background-color: rgba(37, 99, 235, 0.04);
+}
+
+  
+.empty-state {
+    margin-top: 40px;
+    padding: 32px;
+    text-align: center;
+    border-radius: 16px;
+    background-color: #f9fafb;
+    border: 1px dashed var(--border-color);
+  }
+  
+  .empty-state h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  
+  .empty-state p {
+    color: var(--text-muted);
+  }
